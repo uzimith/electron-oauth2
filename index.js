@@ -6,9 +6,8 @@ const fetch = require('node-fetch');
 const objectAssign = require('object-assign');
 const nodeUrl = require('url');
 const electron = require('electron');
-const BrowserWindow = electron.BrowserWindow || electron.remote.BrowserWindow;
-
 module.exports = function (config, windowParams) {
+  const BrowserWindow = electron.BrowserWindow || electron.remote.BrowserWindow;
   function getAuthorizationCode(opts) {
     opts = opts || {};
 
